@@ -4,7 +4,7 @@ import requests
 import random
 
 @app.route("/getRandomNumber", methods=["POST"])
-def get_test():
+def getNumber():
     return {"number":random.randint(0, 9)}
 
 

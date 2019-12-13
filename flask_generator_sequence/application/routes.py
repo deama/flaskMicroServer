@@ -5,7 +5,7 @@ import random
 import string
 
 @app.route("/getRandomSequence", methods=["POST"])
-def get_test():
+def getSequence():
     sequence = ""
     for i in range(20):
         randomNumber = requests.post( "http://127.0.0.1:5001/getRandomNumber" )

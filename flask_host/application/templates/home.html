@@ -3,5 +3,7 @@
 	<button id="{{ buttons[0] }}" onclick="window.location.href='{{ url_for("button0") }}'">{{ buttons[0] }} </button>
 	<button id="{{ buttons[1] }}" onclick="window.location.href='{{ url_for("button1") }}'">{{ buttons[1] }} </button>
 	<button id="{{ buttons[2] }}" onclick="window.location.href='{{ url_for("button2") }}'">{{ buttons[2] }} </button>
-	<button id="{{ buttons[3] }}">{{ buttons[3] }} </button>
+	<button id="{{ buttons[3] }}" onclick="window.location.href='{{ url_for("button3") }}'">{{ buttons[3] }} </button>
+
+	<p>Sequence: {{ sequence }}</p>
 {% endblock %}
