@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, render_template
 from application import app
 
 @app.route("/", methods=["GET"])
