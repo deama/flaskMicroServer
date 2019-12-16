@@ -4,12 +4,14 @@ import requests
 import random
 import string
 
+ip = 127.0.0.1
+
 @app.route("/getRandomSequence", methods=["POST"])
 def getSequence():
     sequence = ""
     for i in range(20):
-        randomNumber = requests.post( "http://127.0.0.1:5001/getRandomNumber" )
-        randomLetter = requests.post( "http://127.0.0.1:5002/getRandomLetter" )
+        randomNumber = requests.post( "http://"+str(ip)+":5001/getRandomNumber" )
+        randomLetter = requests.post( "http://"+str(ip)+":5002/getRandomLetter" )
 
         if random.randint(0,9) > 4 and randomNumber.ok and randomLetter.ok:
             sequence = sequence + str(randomNumber.json()["number"])
