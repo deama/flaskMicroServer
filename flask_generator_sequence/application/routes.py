@@ -4,7 +4,7 @@ import requests
 import random
 import string
 
-ip = 127.0.0.1
+ip = "127.0.0.1"
 
 @app.route("/getRandomSequence", methods=["POST"])
 def getSequence():

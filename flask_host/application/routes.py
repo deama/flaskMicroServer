@@ -4,7 +4,7 @@ import requests
 
 db.create_all()
 
-ip = 127.0.0.1
+ip = "127.0.0.1"
 
 
 buttons = ["Get Random Number", "Get Random Letter", "Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]
