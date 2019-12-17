@@ -1,10 +1,12 @@
 from flask import request, render_template
 from application import app, db
 import requests
+import os
 
 db.create_all()
 
-ip = "127.0.0.1"
+#ip = "35.240.6.143"
+ip = os.getenv("IP")
 
 
 buttons = ["Get Random Number", "Get Random Letter", "Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]

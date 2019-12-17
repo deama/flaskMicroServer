@@ -3,8 +3,10 @@ from application import app
 import requests
 import random
 import string
+import os
 
-ip = "127.0.0.1"
+#ip = "35.240.6.143"
+ip = os.getenv("IP")
 
 @app.route("/getRandomSequence", methods=["POST"])
 def getSequence():
