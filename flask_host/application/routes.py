@@ -1,5 +1,6 @@
 from flask import request, render_template
 from application import app, db
+from application.models import Sequences
 import requests
 import os
 
