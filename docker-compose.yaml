@@ -18,6 +18,9 @@ services:
   - IP=35.187.176.113
   depends_on:
   - flask-number
+  - flask-letter
+  - flask-sequence
+  - flask-prize
  flask-number:
   container_name: flask-number
   image: flask-number
@@ -45,6 +48,16 @@ services:
   ports:
   - target: 5000
     published: 5003
+    protocol: tcp
+  environment:
+  - IP=35.187.176.113
+ flask-prize:
+  container_name: flask-prize
+  image: flask-prize
+  build: ./flask_generator_prize/
+  ports:
+  - target: 5000
+    published: 5004
     protocol: tcp
   environment:
   - IP=35.187.176.113

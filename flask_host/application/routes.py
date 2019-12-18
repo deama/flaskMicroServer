@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request, render_template, session
 from application import app, db
 from application.models import Sequences
 import requests
@@ -41,18 +41,16 @@ def button1():
 def button2():
     res = requests.post( "http://"+str(ip)+":5003/getRandomSequence" )
     if res.ok:
-        sequence = Sequences( id=, sequence=res.json()["sequence"] )
+        session["sequence"] = res.json()["sequence"]
 
-        db.session.add(account)
-        db.session.commit()
-        return render_template("home.html", title="Random Generator", buttons=buttons, sequence=res.json()["sequence"])
+        return render_template("home.html", title="Random Generator", buttons=buttons, sequence=session.get("sequence","not set") )
 
     return "request failed"
 
 @app.route("/button3", methods=["GET"])
 def button3():
-    res = requests.post( "http://"+str(ip)+":5004/getPrize" )
+    res = requests.post( "http://"+str(ip)+":5004/getPrize", json={"sequence":session.get("sequence","not set")} )
     if res.ok:
-        return res.json()
+        return "You have won: " + res.json()["prize"]
 
     return "request failed"
