@@ -4,7 +4,7 @@ from application.models import Sequences
 import requests
 import os
 
-db.create_all()
+#db.create_all()
 
 #ip = "35.240.6.143"
 ip = os.getenv("IP")
@@ -41,6 +41,10 @@ def button1():
 def button2():
     res = requests.post( "http://"+str(ip)+":5003/getRandomSequence" )
     if res.ok:
+        sequence = Sequences( id=, sequence=res.json()["sequence"] )
+
+        db.session.add(account)
+        db.session.commit()
         return render_template("home.html", title="Random Generator", buttons=buttons, sequence=res.json()["sequence"])
 
     return "request failed"

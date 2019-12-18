@@ -1,0 +1,49 @@
+version: "3.7"
+services:
+ flask-host:
+  container_name: flask-host
+  image: flask-host
+  build: ./flask_host/
+  ports:
+  - target: 5000
+    published: 5000
+    protocol: tcp
+  environment:
+  - MYSQL_DB_TEST="proj2_test"
+    SECRET_KEY="qqwertyuiop[asdfghjklzxcvbnn4567"
+    MYSQL_DB="proj2"
+    MYSQL_HOST="35.228.128.140"
+    MYSQL_PASSWORD="Pame121295"
+    MYSQL_USER="root"
+          #- MYSQL_DB_TEST=${MYSQL_DB_TEST}
+          #SECRET_KEY=${SECRET_KEY}
+          #MYSQL_DB=${MYSQL_DB}
+          #MYSQL_HOST=${MYSQL_HOST}
+          #MYSQL_PASSWORD=${MYSQL_PASSWORD}
+          #MYSQL_USER=${MYSQL_USER}
+  depends_on:
+  - flask-number
+ flask-number:
+  container_name: flask-number
+  image: flask-number
+  build: ./flask_generator_number/
+  ports:
+  - target: 5000
+    published: 5001
+    protocol: tcp
+ flask-letter:
+  container_name: flask-letter
+  image: flask-letter
+  build: ./flask_generator_letter/
+  ports:
+  - target: 5000
+    published: 5002
+    protocol: tcp
+ flask-sequence:
+  container_name: flask-sequence
+  image: flask-sequence
+  build: ./flask_generator_sequence/
+  ports:
+  - target: 5000
+    published: 5003
+    protocol: tcp
