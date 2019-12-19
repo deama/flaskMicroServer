@@ -11,14 +11,16 @@ db.session.commit()
 
 title = "Prize Generator"
 
-#buttons = ["Get Random Number", "Get Random Letter", "Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]
 buttons = ["Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]
 
 
 @app.route("/")
 def home():
-    return render_template("home.html", title=title, buttons=buttons)
+	return render_template("home.html", title=title, buttons=buttons )
 
+@app.route("/coverage")
+def coverage():
+    return render_template("coverage.html")
 
 @app.route("/getSequence", methods=["GET"])
 def button0():
