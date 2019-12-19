@@ -12,10 +12,4 @@ db = SQLAlchemy(app)
 
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-#SESSION_TYPE = "redis"
-#Session(app)
-#sess = Session()
-#sess.init_app(app)
-
-
 from application import routes

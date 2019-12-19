@@ -5,15 +5,13 @@ import random
 import string
 import os
 
-#ip = "35.240.6.143"
-ip = os.getenv("IP")
 
 @app.route("/getRandomSequence", methods=["POST"])
 def getSequence():
     sequence = ""
     for i in range(20):
-        randomNumber = requests.post( "http://"+str(ip)+":5001/getRandomNumber" )
-        randomLetter = requests.post( "http://"+str(ip)+":5002/getRandomLetter" )
+        randomNumber = requests.post( "http://flask-number:5000/getRandomNumber" )
+        randomLetter = requests.post( "http://flask-letter:5000/getRandomLetter" )
 
         if random.randint(0,9) > 4 and randomNumber.ok and randomLetter.ok:
             sequence = sequence + str(randomNumber.json()["number"])
