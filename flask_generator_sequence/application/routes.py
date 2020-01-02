@@ -19,6 +19,3 @@ def getSequence():
             sequence = sequence + str(randomLetter.json()["letter"])
 
     return {"sequence":sequence}
-
-
-

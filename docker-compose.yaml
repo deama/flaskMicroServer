@@ -22,14 +22,15 @@ services:
  flask-host:
   container_name: flask-host
   image: flask-host
-  build: ./flask_host/
-  environment:
-  - MYSQL_DB_TEST=${MYSQL_DB_TEST}
-  - SECRET_KEY=${SECRET_KEY}
-  - MYSQL_DB=${MYSQL_DB}
-  - MYSQL_HOST=${MYSQL_HOST}
-  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  - MYSQL_USER=${MYSQL_USER}
+  build:
+   context: ./flask_host/
+   args:
+   - MYSQL_DB_TEST=${MYSQL_DB_TEST}
+   - SECRET_KEY=${SECRET_KEY}
+   - MYSQL_DB=${MYSQL_DB}
+   - MYSQL_HOST=${MYSQL_HOST}
+   - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+   - MYSQL_USER=${MYSQL_USER}
 
 
  flask-number:
