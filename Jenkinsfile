@@ -34,7 +34,7 @@ pipeline
                 '''
             }
         }
-		stage("switch_user_to_pythonadm_and_setup_docker-compose") 
+		stage("switch_user_to_pythonadm_and_setup_docker-compose")
 		{
 			steps 
 			{
