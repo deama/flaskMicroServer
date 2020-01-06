@@ -1,6 +1,6 @@
 pipeline 
 {
-	agent any
+	agent any 
 	environment 
 	{
 		install_dir = "/opt/flask-app"
