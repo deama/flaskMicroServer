@@ -9,7 +9,7 @@ pipeline
 
 	stages 
 	{
-		stage("setup_git_repo") 
+		stage("setup_git_repo")
 		{
 			steps 
 			{
