@@ -25,8 +25,8 @@ pipeline
 			steps 
 			{
 				sh '''ssh ${ssh_ip} << EOF
-					cd ~/flaskMicroServer
-					docker-compose up -d --build
+					sudo su pythonadm
+					whoami
 				'''
 			}
 		}
