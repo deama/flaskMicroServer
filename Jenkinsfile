@@ -18,7 +18,7 @@ pipeline
 		{
 			steps 
 			{
-				sh '''ssh ${ssh_ip} << EOF
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 				'''
 			}
 		}
@@ -26,7 +26,7 @@ pipeline
 		{
 			steps
 			{
-				sh '''ssh ${ssh_ip} << EOF
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 					cd ~/flaskMicroServer
 					sudo rm -rf ${install_dir}
 					sudo mkdir ${install_dir}
@@ -39,8 +39,8 @@ pipeline
 		{
 			steps
 			{
-				sh '''ssh ${ssh_ip} << EOF
-					ssh ${ssh_ip_self} << EOF
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
+					ssh -o StrictHostKeyChecking=no ${ssh_ip_self} << EOF
 						cd ~/flaskMicroServer
 						export BUILD_NUMBER="${number}"
 						docker-compose build
@@ -52,7 +52,7 @@ pipeline
 		{
 			steps
 			{
-				sh '''ssh ${ssh_ip} << EOF
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 					sudo su - pythonadm << BOB
 						cd ${install_dir}
 						docker service update --replicas 3 --image jenkins-docker:5000/flask-host:build-${number}
