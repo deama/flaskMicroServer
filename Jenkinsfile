@@ -4,9 +4,6 @@ pipeline
 	environment 
 	{
 		install_dir = "/opt/flask-app"
-		//ssh_ip = "10.132.0.17"
-		//ssh_ip_self = "10.132.0.16"
-
 		ssh_ip = "app-docker"
 		ssh_ip_self = "jenkins-docker"
 		number = "${env.BUILD_NUMBER}"
