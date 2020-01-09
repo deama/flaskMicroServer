@@ -19,10 +19,6 @@ pipeline
 			steps
 			{
 				sh '''ssh ${ssh_ip} << EOF
-					cd ~/
-					sudo rm -r ./flaskMicroServer
-					git clone --single-branch --branch master https://github.com/deama/flaskMicroServer.git
-					sudo apt update
 				'''
 			}
 		}
