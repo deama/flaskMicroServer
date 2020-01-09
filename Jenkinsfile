@@ -39,12 +39,11 @@ pipeline
 		{
 			steps
 			{
-				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
-					ssh -o StrictHostKeyChecking=no ${ssh_ip_self} << EOF
-						cd ~/flaskMicroServer
-						export BUILD_NUMBER="${number}"
-						docker-compose build
-						docker-compose push
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip_self} << EOF
+					cd ~/flaskMicroServer
+					export BUILD_NUMBER="${number}"
+					docker-compose build
+					docker-compose push
 				'''
 			}
 		}
