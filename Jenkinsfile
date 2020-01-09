@@ -16,7 +16,7 @@ pipeline
 	{
 		stage("setup_git_repo")
 		{
-			steps
+			steps 
 			{
 				sh '''ssh ${ssh_ip} << EOF
 				'''
