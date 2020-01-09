@@ -47,7 +47,7 @@ pipeline
 				'''
 			}
 		}
-		stage("switch_user_to_pythonadm_and_update_service_files")
+		stage("update_service_files")
 		{
 			steps 
 			{
