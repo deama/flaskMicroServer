@@ -54,6 +54,7 @@ pipeline
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 					sudo su - pythonadm << BOB
 						cd ${install_dir}
+						echo ${number}
 						docker service update --replicas 3 --image jenkins-docker:5000/flask-host:build-${number}
 						docker service update --replicas 3 --image jenkins-docker:5000/flask-number:build-${number}
 						docker service update --replicas 3 --image jenkins-docker:5000/flask-letter:build-${number}
