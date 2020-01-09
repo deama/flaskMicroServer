@@ -49,7 +49,7 @@ pipeline
 		}
 		stage("switch_user_to_pythonadm_and_update_service_files")
 		{
-			steps
+			steps 
 			{
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 					cd ${install_dir}
