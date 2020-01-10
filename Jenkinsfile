@@ -27,6 +27,7 @@ pipeline
 			{
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip_self} << EOF
 					cd ~/flaskMicroServer
+					git checkout updateBranch
 					export BUILD_NUMBER="${number}"
 					docker-compose build
 					docker-compose push
