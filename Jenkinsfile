@@ -15,7 +15,9 @@ pipeline
 		{
 			steps 
 			{
-				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
+				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip_self} << EOF
+					cd ~/flaskMicroServer
+					git pull
 				'''
 			}
 		}
