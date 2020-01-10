@@ -1,11 +1,11 @@
 # Prize-pool Micro Service
 
 References:  
-Jenkins: **34.89.51.152:8080**  
-Flask: **34.76.185.11:5001**  
-Pytest-coverage: **34.76.185.11:5001/coverage**  
-Trello-board: **https://trello.com/b/Ek1HhDcU/individual-project-plan**  
-Presentation: **https://docs.google.com/presentation/d/1FVA6l7NiQrynJE3OerSMeHe9xMafuAoekVf3a9gu3Sg/edit?usp=sharing**
+Jenkins: **XXX:8080**  
+Flask: **XXX:5001**  
+Pytest-coverage: **XXX/coverage**  
+Trello-board: **https://trello.com/invite/b/s3TUoIxy/739da47e0a94b830e13967d08956fc72/prize-pool-micro-server-plan**  
+Presentation: **https://docs.google.com/presentation/d/1k9gB2Yz3MCGR2XEBw6swrBItvSjdaUecSkdbBOl02F0/edit?usp=sharing**
 <br><br><br><br><br><br><br><br>
 
 
