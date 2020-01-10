@@ -21,19 +21,6 @@ pipeline
 				'''
 			}
 		}
-		stage("setup_directory")
-		{
-			steps
-			{
-				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
-					cd ~/flaskMicroServer
-					sudo rm -rf ${install_dir}
-					sudo mkdir ${install_dir}
-					sudo cp -r ./* ${install_dir}
-					sudo chown -R pythonadm:pythonadm ${install_dir}
-				'''
-			}
-		}
 		stage("ssh_into_itself_and_build_project")
 		{
 			steps
@@ -51,7 +38,6 @@ pipeline
 			steps
 			{
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
-					cd ${install_dir}
 					docker service update --replicas 2 --image jenkins-docker:5000/flask-host:build-${number} proj_flask-host
 					docker service update --replicas 2 --image jenkins-docker:5000/flask-number:build-${number} proj_flask-number
 					docker service update --replicas 2 --image jenkins-docker:5000/flask-letter:build-${number} proj_flask-letter
