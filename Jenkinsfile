@@ -46,7 +46,7 @@ pipeline
 		}
 		stage("update_service_files")
 		{
-			steps 
+			steps
 			{
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
 					cd ${install_dir}
