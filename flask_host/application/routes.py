@@ -11,7 +11,7 @@ db.session.commit()
 
 title = "Prize Generator"
 
-buttons = ["Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]
+buttons = ["get random number", "get random letter", "Generate Random Sequence", "Send Random Generated Sequence to Prize Pool"]
 
 
 @app.route("/")
