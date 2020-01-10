@@ -22,6 +22,22 @@ def home():
 def coverage():
     return render_template("coverage.html")
 
+@app.route("/getNumber", methods=["GET"])
+def service1():
+    res = requests.post( "http://flask-number:5000/getRandomNumber" )
+    if res.ok:
+        return res.json()["number"]
+
+    return "request failed"
+
+@app.route("/getLetter", methods=["GET"])
+def service2():
+    res = requests.post( "http://flask-letter:5000/getRandomLetter" )
+    if res.ok:
+        return res.json()["letter"]
+
+    return "request failed"
+
 @app.route("/getSequence", methods=["GET"])
 def button0():
     res = requests.post( "http://flask-sequence:5000/getRandomSequence" )
