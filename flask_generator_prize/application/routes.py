@@ -17,12 +17,12 @@ def getPrize():
                     if int(sequence[2]) == int(sequence[2]):
                         try:
                             if int(sequence[7]) == int(sequence[7]):
-                                return {"prize":"100,000"}
+                                return {"prize":"999,999"}
                         except ValueError:
-                            return {"prize":"10,000"}
+                            return {"prize":"99,999"}
                 except ValueError: 
-                    return {"prize":"1,000"}
+                    return {"prize":"9,999"}
         except ValueError:
             pass
 
-    return {"prize":"0"}
+    return {"prize":"X"}
