@@ -26,7 +26,7 @@ def coverage():
 def service1():
     res = requests.post( "http://flask-number:5000/getRandomNumber" )
     if res.ok:
-        return res.json()["number"]
+        return res.json()
 
     return "request failed"
 
@@ -34,7 +34,7 @@ def service1():
 def service2():
     res = requests.post( "http://flask-letter:5000/getRandomLetter" )
     if res.ok:
-        return res.json()["letter"]
+        return res.json()
 
     return "request failed"
 
