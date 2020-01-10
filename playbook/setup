@@ -1,0 +1,16 @@
+[app-docker]
+app-docker
+
+[jenkins-docker]
+jenkins-docker
+
+
+[app-docker:vars]
+ansible_user=deama85
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/google_compute_engine
+
+[jenkins-docker:vars]
+ansible_user=deama85
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/google_compute_engine
