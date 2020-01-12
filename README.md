@@ -1,9 +1,9 @@
 # Prize-pool Micro Service
 
-References:
+References:  
 Jenkins: **http://34.77.231.35**  
 Flask: **http://35.241.188.21**  
-Pytest-coverage: **http://35.241.188.21/coverage**
+Pytest-coverage: **http://35.241.188.21/coverage**  
 Trello-board: **https://trello.com/invite/b/s3TUoIxy/739da47e0a94b830e13967d08956fc72/prize-pool-micro-server-plan**  
 Presentation: **https://docs.google.com/presentation/d/1k9gB2Yz3MCGR2XEBw6swrBItvSjdaUecSkdbBOl02F0/edit?usp=sharing**
 <br><br><br><br><br><br><br><br>
