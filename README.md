@@ -1,6 +1,6 @@
 # Prize-pool Micro Service
 
-References:  
+References:
 Jenkins: **http://34.77.231.35**  
 Flask: **http://35.241.188.21**  
 Pytest-coverage: **http://35.241.188.21/coverage**
