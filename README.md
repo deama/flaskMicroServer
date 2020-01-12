@@ -48,7 +48,7 @@ Coverage may further be increased if integration testing could be performed, suc
 
 
 # Deployment Overview
-![techs used](/images/tech.png)
+![techs used](/images/tech2.png)
 Made a webserver application using Python, MySQL, and Flask. Used git and github for version control whilst using Trello to organise myself. Github would submit requests to Jenkins to update, test using pytest, and redeploy the application. Docker was used to setup an environment for the flask application to run on, ansible was used to setup the VMs that would handle the containers holding the application, and docker-swarm was used to setup rolling updates. Finally, the cloud provider GCP was used to host the application.
 
 Technologies used:  
