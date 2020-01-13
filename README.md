@@ -9,6 +9,18 @@ Presentation: **https://docs.google.com/presentation/d/1k9gB2Yz3MCGR2XEBw6swrBIt
 <br><br><br><br><br><br><br>
 
 
+# Installation Guide Via GCP
+- Create ansible VM.
+- Install ansible on ansible VM.
+- Generate ssh GCP private key via "gcloud auth login".
+- Create ssh keys via "ssh-keygen".
+- Git clone project or git clone playbook directory specifically.
+- Create jenkins-docker VM and app-docker VM.
+- Go into where playbook.yaml is located and run "ansible-playbook -i setup playbook.yaml".
+- Login to jenkins using IP of jenkins VM, no port.
+- Setup webhook or run jenkins build using the Jenkinsfile under JenkinsFileBranch.
+- After build is complete, application should be ready, access via app-docker VM's IP.
+
 # Original Project Idea
 Allow user to play a flappy-bird like game. After completion, the user will be prompted to enter their name and submit their score.
 
