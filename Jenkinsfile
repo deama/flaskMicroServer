@@ -1,7 +1,7 @@
 pipeline 
 {
 	agent any 
-	environment 
+	environment
 	{
 		install_dir = "/opt/flask-app"
 		ssh_ip = "172.31.33.178"
