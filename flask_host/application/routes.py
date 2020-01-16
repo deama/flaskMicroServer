@@ -4,7 +4,7 @@ from application.models import Sequences
 import requests
 import os
 
-#db.create_all()
+db.create_all()
 Sequences.query.delete()
 db.session.commit()
 
