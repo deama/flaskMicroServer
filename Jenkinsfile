@@ -39,11 +39,11 @@ pipeline
 			steps
 			{
 				sh '''ssh -o StrictHostKeyChecking=no ${ssh_ip} << EOF
-					docker service update --replicas 3 --image jenkins-docker:5000/flask-prize:build-${number} proj_flask-prize
-					docker service update --replicas 2 --image jenkins-docker:5000/flask-host:build-${number} proj_flask-host
-					docker service update --replicas 2 --image jenkins-docker:5000/flask-number:build-${number} proj_flask-number
-					docker service update --replicas 2 --image jenkins-docker:5000/flask-letter:build-${number} proj_flask-letter
-					docker service update --replicas 2 --image jenkins-docker:5000/flask-sequence:build-${number} proj_flask-sequence
+					docker service update --replicas 3 --image 172.31.47.162:5000/flask-prize:build-${number} proj_flask-prize
+					docker service update --replicas 2 --image 172.31.47.162:5000/flask-host:build-${number} proj_flask-host
+					docker service update --replicas 2 --image 172.31.47.162:5000/flask-number:build-${number} proj_flask-number
+					docker service update --replicas 2 --image 172.31.47.162:5000/flask-letter:build-${number} proj_flask-letter
+					docker service update --replicas 2 --image 172.31.47.162:5000/flask-sequence:build-${number} proj_flask-sequence
 				'''
 			}
 		}
