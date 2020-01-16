@@ -4,7 +4,7 @@ pipeline
 	environment
 	{
 		install_dir = "/opt/flask-app"
-		ssh_ip = "172.31.33.178"
+		ssh_ip = "172.31.33.38"
 		ssh_ip_self = "172.31.47.162"
 		number = "${env.BUILD_NUMBER}"
 	}
